@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Twitch Streamer Blocker",
+    "version": "1.0",
+    "description": "Hide specific streamers on Twitch.",
+    "permissions": [
+        "storage"
+    ],
+    "host_permissions": [
+        "*://www.twitch.tv/*"
+    ],
+    "background": {},
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {}
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://www.twitch.tv/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "options_page": "options.html"
+}
